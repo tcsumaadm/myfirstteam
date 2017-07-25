@@ -1,6 +1,6 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="team.aspx.cs" Inherits="SASTeam.team" %>
 
-<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>
+<%--<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="asp" %>--%>
 
 <!DOCTYPE html>
 
@@ -12,7 +12,7 @@
     <script src="../../Scripts/jquery-ui.js"></script>
     <script src="Scripts/jquery.quicksearch.js"></script>
     <link href="../../Scripts/jquery-ui.css" rel="stylesheet" />
-    <script type="text/javascript">
+   <%-- <script type="text/javascript">
         $(function () {
             $('.search_textbox').each(function (i) {
                 $(this).quicksearch("[id*=GridView1] tr:not(:has(th))", {
@@ -22,12 +22,12 @@
                 });
             });
         });
-    </script>
+    </script>--%>
 </head>
 <body>
     
     <form id="form1" runat="server">
-        <asp:ToolkitScriptManager runat="server"></asp:ToolkitScriptManager>
+      <%--  <asp:ToolkitScriptManager runat="server"></asp:ToolkitScriptManager>--%>
         <div>
 
 
@@ -54,18 +54,6 @@
                 <SortedDescendingHeaderStyle BackColor="#00547E" />
 
             </asp:GridView>
-
-            <asp:TabContainer ID="TabContainer1" runat="server" ActiveTabIndex="2">
-                <asp:TabPanel runat="server" HeaderText="TabPanel1" ID="one">
-                    <ContentTemplate><asp:TextBox runat ="server" ID="t1" Text ="first"></asp:TextBox></ContentTemplate>
-                </asp:TabPanel>
-                <asp:TabPanel ID="TabPanel2" runat="server" HeaderText="two">
-                    <ContentTemplate><asp:TextBox runat ="server" ID="TextBox1" Text ="second"></asp:TextBox></ContentTemplate>
-                </asp:TabPanel>
-                <asp:TabPanel ID="TabPanel3" runat="server" HeaderText="three">
-                    <ContentTemplate><asp:TextBox runat ="server" ID="TextBox2" Text ="third"></asp:TextBox></ContentTemplate>
-                </asp:TabPanel>
-            </asp:TabContainer>
 
         </div>
     </form>
